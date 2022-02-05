@@ -6,7 +6,7 @@ const typeDefs = gql `
 
     type Query {
         "Query to get tracks array for the homepage grid"
-        tracksFormHome: [Track!]!
+        tracksForHome: [Track!]!
     }
 
 
