@@ -5,27 +5,27 @@ const typeDefs = require('./schema');
 
 const mocks = {
     Query: () => ({
-        tracksForHome: () => [...new Array(6)],
+        tracksForHome: () => [...new Array(9)],
     }),
     Track: () => ({
-        id: () => 'Track_01',
-        title: () => 'Astroy Kitty, Space Explorer',
+        id: () => `track_${Math.random()*1000}`,
+        title: () => 'Astro Kitty, Space Explorer',
         author: () => {
             return {
                 name: 'Grumpy Cat',
-                photo: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimagesvc.meredithcorp.io%2Fv3%2Fmm%2Fimage%3Furl%3Dhttps%253A%252F%252Fstatic.onecms.io%252Fwp-content%252Fuploads%252Fsites%252F6%252F2013%252F05%252Fb31.jpg&imgrefurl=https%3A%2F%2Few.com%2Farticle%2F2013%2F05%2F30%2Fgrumpy-cats-meme-movie%2F&tbnid=rIh55uZ3G7MpqM&vet=12ahUKEwi_meiGs-n1AhXBqHIEHatGCSMQMygLegUIARDnAQ..i&docid=hMshynBOwFsUFM&w=973&h=1200&q=grumpy%20cat&ved=2ahUKEwi_meiGs-n1AhXBqHIEHatGCSMQMygLegUIARDnAQ'
+                photo: 'https://res.cloudinary.com/dety84pbu/image/upload/v1606816219/kitty-veyron-sm_mctf3c.jpg',
             };
         },
         thumbnail: () =>
-            'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimagesvc.meredithcorp.io%2Fv3%2Fmm%2Fimage%3Furl%3Dhttps%253A%252F%252Fstatic.onecms.io%252Fwp-content%252Fuploads%252Fsites%252F6%252F2013%252F05%252Fb31.jpg&imgrefurl=https%3A%2F%2Few.com%2Farticle%2F2013%2F05%2F30%2Fgrumpy-cats-meme-movie%2F&tbnid=rIh55uZ3G7MpqM&vet=12ahUKEwi_meiGs-n1AhXBqHIEHatGCSMQMygLegUIARDnAQ..i&docid=hMshynBOwFsUFM&w=973&h=1200&q=grumpy%20cat&ved=2ahUKEwi_meiGs-n1AhXBqHIEHatGCSMQMygLegUIARDnAQ',
+            'https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg',
         length: () => 1210,
-        modulesCount: () => 6
-    })
+        modulesCount: () => 6,
+    }),
 }
 
 const server = new ApolloServer({
     typeDefs,
-    mocks
+    mocks,
 })
 
 
