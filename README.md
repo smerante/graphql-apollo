@@ -1,1 +1,1 @@
-# graphql-apollo
+# Odyssey GraphQL Tutorials
