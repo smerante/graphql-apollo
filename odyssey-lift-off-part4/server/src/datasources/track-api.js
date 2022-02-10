@@ -30,7 +30,7 @@ class TrackAPI extends RESTDataSource {
   }
 
   incrementTrackViews(trackId) {
-    this.patch(`tracks/${trackId}/numberOfViews`);
+    return this.patch(`track/${trackId}/numberOfViews`);
   }
 }
 
